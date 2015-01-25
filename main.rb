@@ -1,3 +1,6 @@
+# © 2014 Sofia Swidarowicz
+# main.rb
+
 require "erb"
 require_relative 'set_values'
 
