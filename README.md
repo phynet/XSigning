@@ -1,5 +1,5 @@
 # SSCodesigningXcode
-**Ruby script to write thorugh terminal your Xcode Project**
+**Ruby script to sign thorugh terminal your Xcode Project**
 
 Just download and run in terminal:
     
