@@ -21,6 +21,10 @@ Your exact Certificate Profile, that match that particulary Provisioning Profile
 
 And the path of your xcodeproj
 
+TO DO:
+
+Change project path to a relative one.
+
     /Users/xxxx/Projects/binary/ios/MyAwesomeProject-1
 
 This script is working. But still is the Alpha version.
