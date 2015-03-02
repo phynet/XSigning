@@ -42,7 +42,7 @@ class Main < SetValues
           format_array = Utils::formatting_string_certificate(list_certs)
           puts format_array
         elsif opt.eql? 'prov'
-          @provisioning_profile_path = ARGV[2].dup
+          @provisioning_profile_path = ARGV[1].dup
           puts "Using Provisioning Profile path: #{@provisioning_profile_path}"
           set_values.path_provisioning(@provisioning_profile_path)
           array_provisioning = set_values.list_of_all_provisioning
