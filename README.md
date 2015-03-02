@@ -32,6 +32,8 @@ And the path of your Provisioning Profile
 
     /Users/YourUser/Library/MobileDevice/Provisioning\ Profiles/
 
+##List certificates or provisioning profiles
+
 Also I've added two new options to list certificate profiles and provisioning profiles stored in your mac. Right now you can use it like: 
 
     ruby main.rb cert
