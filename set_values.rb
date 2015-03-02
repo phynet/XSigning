@@ -70,9 +70,11 @@ class SetValues
 
   def check_for_match_certificate(certificate_name_array, user_certificate_name)
     format_array = Utils::formatting_string_certificate(certificate_name_array)
-       return false, format_array unless format_array.include? user_certificate_name
+    unless format_array.include? user_certificate_name
+      return false, format_array
     else
-      return true
+      return true, nil
+    end
   end
 
   def validate_codesign_identity(user_certificate)
