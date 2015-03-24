@@ -57,6 +57,29 @@ class SetValues
     puts 'File changed...'
     puts 'Done with signing...'
   end
+  
+  def write_in_XCProject2(uuid_prov, user_cert_name)  
+
+    #prov = "PROVISIONING_PROFILE = \"#{uuid_prov}\";"
+    #cert = "CODE_SIGN_IDENTITY = \"#{user_cert_name}\";"
+     
+     prov =/<key>PROVISIONING_PROFILE<\/key>\s.*?<string>(.*?)<\/string>/mi
+     cert =/<key>CODE_SIGN_IDENTITY<\/key>\s.*?<string>(.*?)<\/string>/mi
+
+     prov1="<key>PROVISIONING_PROFILE</key>" + "\n"
+     prov2= "                <string>#{uuid_prov}</string>"
+     prov3 = prov1+prov2
+
+     cert1="<key>CODE_SIGN_IDENTITY</key>"+"\n"
+     cert2= "                <string>#{user_cert_name}</string>"
+     cert3 = cert1+cert2
+
+     File.open(filename = @path_xcode , "r+") { |file| file << File.read(filename).gsub(prov,"#{prov3}") }
+     File.open(filename = @path_xcode , "r+") { |file| file << File.read(filename).gsub(cert,"#{cert3}") }
+
+    puts 'File changed...'
+    puts 'Done with signing...'
+  end
 
   def check_for_match_provisioning(array_uuid,provisioning_name_array, user_provisioning_name)
     provisioning_name_array.each_with_index do |value, index|
