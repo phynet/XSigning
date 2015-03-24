@@ -1,4 +1,4 @@
-# SSCodesigningXcode
+# XSigning
 **Ruby script to sign thorugh terminal your Xcode Project**
 
 Do you need to install some app in your iphone/ipad device?, and you have found some great libraries like [Shenzhen](https://github.com/nomad/shenzhen) to create an IPA file and [iOS-deploy](https://github.com/phonegap/ios-deploy) to install it in your device. But, there's a missing step. Signing your xcodeproject. 
