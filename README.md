@@ -1,3 +1,5 @@
+# [OUT DATED] This isn't working anymore. And you now can use fastlane :/
+
 # XSigning
 **Ruby script to sign thorugh terminal your Xcode Project**
 
